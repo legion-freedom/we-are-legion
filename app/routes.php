@@ -13,5 +13,15 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	echo Form::open(array('url' => 'log', 'method' => 'POST'));
+    echo Form::label('nom', 'Nom :');
+    echo Form::text('nom'),'<br>';
+    echo Form::label('age', 'Age :');
+    echo Form::text('age'),'<br>';
+    echo Form::submit('Submit');
+    echo Form::close();
+});
+Route::any('log', function()
+{
+    return 'Le nom est '.Input::get('nom').'<br>'.'L\'âge est '.Input::get('age');
 });
