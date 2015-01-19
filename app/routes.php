@@ -11,15 +11,8 @@
 |
 */
 
-Route::get('/', function()
-{
-	echo Form::open(array('url' => 'log', 'method' => 'POST'));
-    echo Form::label('nom', 'Nom :');
-    echo Form::text('nom'),'<br>';
-    echo Form::label('age', 'Age :');
-    echo Form::text('age'),'<br>';
-    echo Form::submit('Submit');
-    echo Form::close();
+Route::get('/', function(){
+	return View::make('presentation');
 });
 Route::any('log', function()
 {
