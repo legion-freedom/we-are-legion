@@ -11,4 +11,3 @@ chmod 775 app/controllers app/views
 chmod ug+s public/index.php app/storage/sessions
 echo "rm readme.md"
 rm readme.md
-
