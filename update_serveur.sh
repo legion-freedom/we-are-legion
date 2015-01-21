@@ -1,3 +1,3 @@
 git pull
-#chmod ug+s *
-chmod 777 *
+chmod ug+s *
+chmod 777 * -R
